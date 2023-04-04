@@ -1,31 +1,31 @@
 .game{
-    width: 600px;
-    height: 200px;
-    border-bottom: 1px solid #000;
-    margin: auto;
+    width: 600px;   /* ширина об'єкта*/
+    height: 200px;  /* висота */
+    border-bottom: 1px solid #000;  /* нижня межа в 1 піксель чорного кольору*/
+    margin: auto;   /* відступ, розміщення об'єкта */
 
-}
+}   
 #dino {
     width: 50px;
     height: 50px;
     background-image: url(image/dino.png);
-    background-size: 50px 50px;
-    position: relative;
+    background-size: 50px 50px;    /* розмір фону */
+    position: relative;     /* Здвих об'єкта кудись в даному випадку в низ на 150 пікселів */
     top: 150px;
 }
 #cactus {
-    width: 20px;
-    height: 40px;
+    width: 15px;
+    height: 35px;
     background-image: url(image/cactus.png);
-    background-size: 20px 40px;
-    position: relative;
-    top: 110px;
+    background-size: 15px 35px;    /* розмір фону */
+    position: relative;        /* Здвих об'єкта кудись в даному випадку в низ на 110 пікселів і зліва на 580 */ 
+    top: 115px;
     left: 580px;
-    animation: cactusMov 3s infinite linear;
+    animation: cactusMov 3s infinite linear;       /* анімація infinite безкінесна linear лінійна  */
 
 
 }
-@keyframes cactusMov {
+@keyframes cactusMov {          /* ключові кадри  */
     0% {
         left: 580px;
     }
@@ -35,27 +35,42 @@
     }
 
 }
-.jump{
-    animation: jump 0.3s linear;
+.jump{                            /* стрибок  */
+    animation: jump 0.4s linear;
 }
 @keyframes jump {
     0% {
         top: 150px;
+        left: 8px;
     }
-    30% {
-        top: 130px;
+    20% {
+        top: 100px;
+        left: 8px;
+
+    }
+    40% {
+        top: 50px;
+        left: 8px;
 
     }
     50% {
-        top: 80px;
+        top: 10px;
+        left: 8px;
+
+    }
+    60% {
+        top: 50px;
+        left: 8px;
 
     }
     80% {
-        top: 130px;
+        top: 100px;
+        left: 8px;
 
     }
     100% {
         top: 150px;
+        left: 8px;
 
     }
 
